@@ -1,0 +1,156 @@
+.warp{
+  width:750rpx;
+  height:100vh;
+  background:#fff;
+}
+.box{
+  width:700rpx;
+  height:37rpx;
+  margin-left:25rpx; 
+  display: flex;
+  justify-content:space-between;
+}
+.box-logo{
+  width:37rpx;
+  height:37rpx;
+}
+.goudan{
+  width:750rpx;
+  height:285rpx;
+  background:#1ca95e;
+  display: flex;
+  flex-direction: column;
+  align-content: center; 
+}
+.warp-logo{
+  width:130rpx;
+  height:130rpx;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom:20rpx; 
+}
+.logo{
+  width:120rpx;
+  height:120rpx;
+  display: block;
+  border-radius:50%; 
+  margin: 5rpx auto;
+}
+.warp-text{
+  color:#fff;
+  text-align: center;
+  font-size:20px;
+}
+.order{
+  width:750rpx;
+  background: #fff;
+  border-bottom:1px solid  #f8f8f8;
+}
+.order-auto{
+  margin-left:28rpx;
+  margin-right:28rpx;
+  display: flex; 
+  justify-content: space-between;
+}
+.order-left{
+  width: 190rpx;
+  height:100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-logo{
+  width: 44rpx;
+  height: 44rpx;
+}
+.order-text{
+  color:#747474;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.order-right{
+  width:175rpx;
+  height:100rpx;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-rig-text{
+  color:#bebebe;
+  font-size:23rpx;
+  line-height: 100rpx;
+}
+.order-rig-text1{
+  color:#bebebe;
+  font-size:30rpx;
+  line-height: 100rpx;
+}
+.stay{
+  width:750rpx;
+  border:1px solid #f8f8f8;
+}
+.stay-box{
+  height:135rpx;
+  box-sizing: border-box;
+  padding: 0 37rpx;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+.stay-column{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+ 
+}
+.stay-logo{
+  width:44rpx;
+  height:38rpx;
+  display: block;
+  margin-bottom: 16rpx;
+ 
+}
+.stay-text{
+  color:#919191;
+  font-size:23rpx;
+}
+.discount{
+  border-bottom:1px solid #f8f8f8;
+}
+.discount-box{
+  padding: 0px 28rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discount-left{
+  width:190rpx;
+  height:85rpx;
+  display: flex;
+  align-items: center;
+}
+.discount-logo{
+  width:44rpx;
+  height:44rpx; 
+  margin-right:30rpx; 
+}
+.discount-text{
+  color:#747474;
+  font-size:28rpx;
+}
+.discount-right{
+  width:16rpx;
+  height:29rpx;
+  color:#b7b7b7;
+  font-size:29rpx;
+  line-height: 85rpx;
+}
+.order-rig-logo{
+  width:14rpx;
+  height:24rpx;
+}
+/* .order-rig-logo1{
+  margin-top:30.5rpx;  
+}*/

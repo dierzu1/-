@@ -1,0 +1,13 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+@import "./pages/base/font/font1/iconfont.wxss";
+@import "./pages/base/font/font2/iconfont.wxss";
+@import "./pages/base/font1/iconfont.wxss";

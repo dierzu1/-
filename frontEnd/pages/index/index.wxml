@@ -1,0 +1,218 @@
+<!--index.wxml-->
+<view class='index'>
+  <view class='index-tops'> 
+    <view class='kongs'></view>
+    <view class='titles'>
+      <text class='iconfont icon-zuojiantou'></text>
+      <view>首页</view>
+      <view>搜索</view>
+    </view>
+  </view>
+<!-- 轮播开始 -->
+  <view class='banner'>
+    <view class='banner-left'></view>
+    <view class='center'>
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+        <block wx:for="{{carousel}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item.src}}" class="slide-image" height="360rpx" width="627"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='banner-right'></view>
+  </view>
+  <!-- 轮播结束 -->
+  <!-- 热销开始 -->
+  <view class='main-push'>
+    <view class='mp-top'>
+      <view class='top-title'>快来和我拼团吧</view>
+      <image src='../../img/mainImg.jpg'></image>
+    </view>
+    <view class='main-content'>
+      <image src=''></image>
+      <view class='explain'>
+        <view class='explain-txt'>双面透气设计呵护颈椎健康泰国如绞磨宽频面枕头</view>
+        <view class='price'>
+          <text class='now'>￥228</text>
+          <text class='del'>￥150</text>
+        </view>
+        <text class='flash-sale'>限时抢购</text>
+      </view>
+    </view>
+    <view class='numbers'>
+      <view class='people'>
+        <view class='initiator '>
+        <image src=''></image>
+        </view>
+         <view>
+        <image src=''></image>
+        </view>
+         <view>
+        <image src=''></image>
+        </view>
+         <view>
+        <image src=''></image>
+        </view>
+         <view>
+        <image src=''></image>
+        </view>
+      </view>
+      <view class='residue'>
+        仅剩余<text>3</text>人，快呼唤小伙伴来参加吧
+      </view>
+      <view class='time-remaining'>
+        剩余<text>23</text>:<text>23</text>:<text>34</text>结束
+      </view>
+    </view>
+  </view>
+  <!-- 热推荐结束 -->
+  <!-- 优惠券开始 -->
+  <view class='coupon'>
+    <view class='coupon-top'>
+      <image src=''></image>
+      <view class='bigTxt'>玩趣加购 分享有礼</view>
+      <view class='smallTxt'>先领卷 在购物</view>
+    </view>
+    <view class='coupon-all'>
+      <view class='list'>
+        <text class='first'>RMB</text>
+        <text class='much'>10</text>
+        <text class='cha'>x</text>
+        <text class='txt'>收藏+关注</text>
+        <image src=''></image>
+      </view>
+      <view class='list'>
+        <text class='first'>RMB</text>
+        <text class='much'>10</text>
+        <text class='cha'>x</text>
+        <text class='txt'>收藏+关注</text>
+        <image src=''></image>
+      </view>
+      <view class='list'>
+        <text class='first'>RMB</text>
+        <text class='much'>10</text>
+        <text class='cha'>x</text>
+        <text class='txt'>收藏+关注</text>
+        <image src=''></image>
+      </view>
+      <view class='list'>
+        <text class='first'>RMB</text>
+        <text class='much'>10</text>
+        <text class='cha'>x</text>
+        <text class='txt'>收藏+关注</text>
+        <image src=''></image>
+      </view>
+    </view>
+  </view>
+  <!-- 优惠券结束 -->
+  <!--镇店之宝 -->
+  <view class='shop-treasure'>
+      <view class='shop-treasure-top'>
+        <image src=''></image>
+      </view>
+      <view class='tui'>
+        <view class='tui-top'>
+          <image src=''></image>
+          <text class='val'>镇店之宝 任君挑选</text>
+          <image src=''></image>
+        </view>
+        <view class='imgs'>
+          <image src='../../img/englist-striped.jpg'></image>
+        </view>
+        <view class='ItemCF'>泰国平面波浪枕</view>
+      </view>
+      <view class='shop-content'>
+        <view class='first-shop'>
+          <image src=''></image>
+         <view class='particulars'>
+            <view class='particulars-price'>
+              <image src=''></image>
+              <text class='pc'>￥228.00</text>
+            </view>
+            <view class='buy'>
+              立即购买<text>></text>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+  <!-- 镇店之宝结束 -->
+  <!-- 店长推荐开始 -->
+  <view class='sale-recommend'>
+      <view class='sale-recommend-top'>
+        <image src=''></image>
+      </view>
+      <view class='sale'>
+        <view class='sale-top'>
+          <image src=''></image>
+          <text class='val'>口碑臻口 店长力荐</text>
+          <image src=''></image>
+        </view>
+        <view class='imgs'>
+          <image src='../../img/englist-striped.jpg'></image>
+        </view>
+        <view class='ItemCF'>泰国平面波浪枕</view>
+      </view>
+      <view class='sale-main'>
+        <view class='sale-list' wx:for="{{recommend}}" wx:key="{{index}}">
+          <view class='list-title'>
+           {{item.shop_name}}
+          </view>
+          <image src="{{item.shop_logo1}}"></image>
+          <view class='pri'>
+            <image src='../../img/icon-striped.jpg'></image>
+            <view class='all-price'> ￥{{item.shop_price}}</view>
+            <view class='bug'>
+              <text>立即购买</text>
+              <text>></text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='sale-end'>
+        <image src='../../img/222.jpg'></image>
+      </view>
+  </view>
+  <!-- 店长推荐结束 -->
+  <!-- 排行榜开始 -->
+  <view class='ranking-list'>
+    <view class='ranking-title'>
+      <text class='left'>排行榜</text>
+      <view class='ranking'>
+        <text class='active'>销量排行</text>
+        <text>销量排行</text>
+      </view>
+    </view>
+    <view class='rank-list'>
+      <view class='lists' wx:for="{{ranking}}" wx:key="{{index}}">
+        <image src="{{item.goods_thumb}}"></image>
+        <view class='rank-txt'>
+          <view class='xu'>1</view>
+          <view class='txt'>
+           {{item.goods_name}}
+          </view>
+          <view class='person'>199人付款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 排行榜结束 -->
+  <!--猜你喜欢开始 -->
+  <view class='your-love'>
+    <view class='love-title'>猜你喜欢</view>
+    <view class='love-list'>
+      <view class='love-every' bindtap='goParticulars' wx:for="{{guessgoods}}" wx:key="{{index}}" data-id="{{item.goods_id}}">
+        <image src="{{item.goods_thumb}}"></image>
+        <text class='detail'>{{item.goods_name}}</text>
+         <text class='yuan'>泰国天然乳胶原料</text>
+        <text class='love-pri'>￥{{item.shop_price}}</text>
+      </view>
+    </view>
+    <view class='more-love'>
+      查看更多
+    </view>
+  </view>
+  <!-- 猜你喜欢结束 -->
+</view>

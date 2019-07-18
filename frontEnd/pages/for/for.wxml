@@ -1,0 +1,6 @@
+<!--pages/for/for.wxml-->
+
+<text>pages/for/for.wxml</text>
+<view class='wrap'>
+  <template name='list' wx:for="{{list}}"/>
+</view>

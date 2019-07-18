@@ -1,0 +1,62 @@
+<!--pages/ding/ding.wxml-->
+<view class='ding'>
+  <view class='top'>
+    <text>订单编号:98765406516434</text>
+    <text class='over'>交易完成</text>
+  </view>
+  <view class='ding-list'>
+    <!-- 完成的 -->
+    <view class='overMay'>
+      <view class='lists' wx:for='{{complete}}' wx:key='index'>
+          <view class='list-top'>
+            <image src=''></image>
+          <view class='listReight'>
+              <view class='txt'>
+                <view class='theme'>{{item.del}}</view>
+                <view class='theme-bottom'>{{item.dels}}</view>
+              </view>
+              <view class='pri'>
+                <view class='pris'>￥{{item.price}}</view>
+                <view class='nums'>X{{item.count}}</view>
+              </view>
+            </view> 
+          </view> 
+          <view class='allPrice'>
+              共计<text>{{item.count}}</text>件商品 合计:<text>￥{{item.price}}</text>(含运费￥0.00)
+          </view>  
+          <view class='delAndre'>
+            <text class='recommend'>评价</text>
+            <text class='del' bindtap='delCur' data-index='{{index}}'>删除</text>
+          </view>       
+      </view>
+    </view>
+    <!-- 没有支付的开始 -->
+    <view class='noOverPay'>
+      <view class='lists'  wx:for='{{noComplete}}' wx:key='{{index}}'>
+          <view class='tops'></view>
+          <view class='list-top'>
+            <image src=''></image>
+          <view class='listReight'>
+              <view class='txt'>
+                <view class='theme'>{{item.del}}</view>
+                <view class='theme-bottom'>{{item.dels}}</view>
+              </view>
+              <view class='pri'>
+                <view class='pris'>￥{{item.price}}</view>
+                <view class='nums'>X{{item.count}}</view>
+                <view class='dai'>待支付</view>
+              </view>
+            </view> 
+          </view> 
+          <view class='allPrice'>
+              共计<text>{{item.count}}</text>件商品 合计:<text>￥{{item.price}}</text>(含运费￥0.00)
+          </view>  
+          <view class='delAndre'>
+            <text class='removeList'>取消订单</text>
+            <text class='goPay' bindtap='goPay' data-index='{{index}}'>去支付</text>
+          </view>       
+      </view>
+    </view>
+     <!-- 没有支付得结束 -->
+  </view>
+</view>

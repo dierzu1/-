@@ -1,0 +1,84 @@
+<view class="warp">
+  <view class="goudan">
+    <view class="box">
+      <image src="./image/left.gif" class="box-logo"></image>
+      <image src="./image/right.gif" class="box-logo"></image>
+    </view>
+    <view class="warp-logo">
+       <image src="./image/未标题-1.gif" class="logo"></image> 
+    </view>
+    <text class="warp-text">苏轼李白</text>
+  </view>
+  <view class="order">
+    <view class="order-auto">
+      <view class="order-left" bindtap='order'>
+        <image src="./image/dingdan.gif" class="order-logo"></image>  
+        <text class="order-text">我的订单</text>
+      </view>
+      <view class="order-right">
+        <text class="order-rig-text">查看全部订单</text>
+        <image src="./image/fanhui.gif" class="order-rig-logo"></image>
+      </view>
+    </view>
+    <view class="stay">
+      <view class="stay-box">
+        <view class="stay-column">
+          <image src="./image/daifukuan.gif" class="stay-logo"></image>
+          <text class="stay-text">待付款</text>
+        </view>
+        <view class="stay-column">
+          <image src="./image/daifenxiang.gif" class="stay-logo"></image>
+          <text class="stay-text">待付款</text>
+        </view>
+        <view class="stay-column">
+          <image src="./image/daifahuo.gif" class="stay-logo"></image>
+          <text class="stay-text">待发货</text>
+        </view>
+         <view class="stay-column">
+          <image src="./image/daifahuo1.gif" class="stay-logo"></image>
+          <text class="stay-text">待发货</text>
+        </view>
+        <view class="stay-column">
+          <image src="./image/daipingjia.gif" class="stay-logo"></image>
+          <text class="stay-text">待评价</text>
+        </view>
+      </view>
+      <view class="discount" bindtap='coupon'>
+        <view class="discount-box">
+          <view class="discount-left">
+            <image src="./image/youhuiquan.gif" class="discount-logo"></image>
+            <text class="discount-text">优惠券</text>
+          </view>
+         <image src="./image/fanhui.gif" class="order-rig-logo order-rig-logo1"></image>
+        </view>
+      </view>
+      <view class="discount" bindtap='commoditydetails'>
+        <view class="discount-box">
+          <view class="discount-left">
+            <image src="./image/shoucang.gif" class="discount-logo"></image>
+            <text class="discount-text">商品收藏</text>
+          </view>
+         <image src="./image/fanhui.gif" class="order-rig-logo order-rig-logo1"></image>
+        </view>
+      </view>
+      <view class="discount" bindtap='browsing'>
+        <view class="discount-box">
+          <view class="discount-left">
+            <image src="./image/liulan.gif" class="discount-logo"></image>
+            <text class="discount-text">历史浏览</text>
+          </view>
+          <image src="./image/fanhui.gif" class="order-rig-logo order-rig-logo1"></image>
+        </view>
+      </view>
+      <view class="discount" bindtap='refund'>
+        <view class="discount-box">
+          <view class="discount-left">
+            <image src="./image/tui.gif" class="discount-logo"></image>
+            <text class="discount-text">退款售后</text>
+          </view>
+         <image src="./image/fanhui.gif" class="order-rig-logo order-rig-logo1" ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

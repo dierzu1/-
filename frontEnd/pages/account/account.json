@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav":"../base/components/nav/nav",
+    "backNav":"../base/components/backNav/backNav"
+  },
+  "navigationStyle":"custom"
+
+}
