@@ -59,7 +59,7 @@
 .eva-content .content_top .add{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 128rpx;
   height: 128rpx;
