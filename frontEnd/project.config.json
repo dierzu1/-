@@ -108,13 +108,6 @@
 				},
 				{
 					"id": -1,
-					"name": "for",
-					"pathName": "pages/for/for",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "pages/evaluate/evaluate",
 					"pathName": "pages/evaluate/evaluate",
 					"query": "",
