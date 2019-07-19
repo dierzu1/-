@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -103,12 +103,27 @@
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "applyRefund",
+					"pathName": "pages/applyRefund/applyRefund",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
 					"scene": null
 				}
 			]
