@@ -23,8 +23,15 @@
             共计<text>1</text>件商品 合计:<text>￥299.0</text>(含运费￥0.00)
         </view>  
         <view class='delAndre'>
+<<<<<<< HEAD
           <text class='recommend' bindtap="after">评价</text>
           <text class='del'>删除</text>
+=======
+         
+          <text class='recommend'>评价</text>
+           <text class='del'>删除</text>
+            <text class='refund' bindtap='gotoRefund'>申请退款</text>
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
         </view>       
     </view>
     <view class='lists'>

@@ -48,7 +48,11 @@
 			"list": []
 		},
 		"miniprogram": {
+<<<<<<< HEAD
 			"current": -1,
+=======
+			"current": 10,
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
 			"list": [
 				{
 					"id": -1,
@@ -101,16 +105,33 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "pages/evaluate/evaluate",
 					"pathName": "pages/evaluate/evaluate",
+=======
+					"name": "for",
+					"pathName": "pages/for/for",
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "pages/refund/refund",
 					"pathName": "pages/refund/refund",
 					"query": "",
+=======
+					"name": "applyRefund",
+					"pathName": "pages/applyRefund/applyRefund",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
 					"scene": null
 				}
 			]

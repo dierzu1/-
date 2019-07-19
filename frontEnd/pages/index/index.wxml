@@ -44,10 +44,10 @@
     <view class='numbers'>
       <view class='people'>
         <view class='initiator '>
-        <image src=''></image>
+        <image src='./image/person1.png'></image>
         </view>
          <view>
-        <image src=''></image>
+        <image src='./image/person2.png'></image>
         </view>
          <view>
         <image src=''></image>

@@ -16,6 +16,7 @@ Page({
       title: '订单'
     })
   },
+<<<<<<< HEAD
 
   // 跳转评价页面
   after(){
@@ -24,6 +25,13 @@ Page({
     })
   },
 
+=======
+  gotoRefund(){
+    wx.navigateTo({
+      url:'../applyRefund/applyRefund'
+    })
+  },
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
