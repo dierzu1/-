@@ -16,7 +16,11 @@ Page({
       title: '订单'
     })
   },
-
+  gotoRefund(){
+    wx.navigateTo({
+      url:'../applyRefund/applyRefund'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
