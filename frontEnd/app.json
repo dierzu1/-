@@ -14,7 +14,14 @@
     "pages/particulars/particulars",
     "pages/cart/cart",
     "pages/for/for",
+<<<<<<< HEAD
+    "pages/After/After",
+    "pages/Reviewed/Reviewed",
+    "pages/Publish/Publish",
+    "pages/success/success"
+=======
     "pages/applyRefund/applyRefund"
+>>>>>>> ce65e1a77c7bf159902afc2d2c626564c4ffc427
   ],
   "permission": {
     "scope.userLocation": {

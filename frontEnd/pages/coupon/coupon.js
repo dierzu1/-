@@ -15,7 +15,6 @@ Page({
     wx.setNavigationBarTitle({
       title: '领券中心'
     })
-
   },
 
   /**
