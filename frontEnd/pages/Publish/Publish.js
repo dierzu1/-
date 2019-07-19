@@ -1,11 +1,12 @@
-// pages/order/order.js
+// pages/Publish/Publish.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    checked: true,
+    value: 5
   },
 
   /**
@@ -13,17 +14,15 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '订单'
+      title: '我要发表'
     })
   },
 
-  // 跳转评价页面
-  after(){
-    wx.navigateTo({
-      url: '../After/After'
-    })
+  onChange(event) {
+    this.setData({
+      checked: event.detail
+    });
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

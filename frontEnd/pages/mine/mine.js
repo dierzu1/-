@@ -7,31 +7,31 @@ Page({
   data: {
 
   },
-  discount(){
-    wx.navigateTo({
-      url: '../discount/discount'
-    })
-  },
+  // 商品收藏
   commoditydetails(){
     wx.navigateTo({
       url: '../commoditydetails/commoditydetails'
     })
   },
+  // 历史浏览
   browsing() {
     wx.navigateTo({
       url: '../browsing/browsing'
     })
   },
+  // 退款售后
   refund(){
     wx.navigateTo({
       url: '../refund/refund'
     })
   },
+  // 优惠券
   coupon(){
     wx.navigateTo({
       url: '../coupon/coupon'
     })
   },
+  // 我的订单
   order(){
     wx.navigateTo({
       url: '../order/order'

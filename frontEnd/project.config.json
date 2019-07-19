@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -103,12 +103,55 @@
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/evaluate/evaluate",
+					"pathName": "pages/evaluate/evaluate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "售后评价",
+					"pathName": "pages/After/After",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已评价",
+					"pathName": "pages/Reviewed/Reviewed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发表",
+					"pathName": "pages/Publish/Publish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我要评价",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/refund/refund",
+					"pathName": "pages/refund/refund",
 					"scene": null
 				}
 			]

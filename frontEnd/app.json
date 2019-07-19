@@ -14,7 +14,10 @@
     "pages/particulars/particulars",
     "pages/cart/cart",
     "pages/for/for",
-    "pages/evaluate/evaluate"
+    "pages/After/After",
+    "pages/Reviewed/Reviewed",
+    "pages/Publish/Publish",
+    "pages/success/success"
   ],
   "permission": {
     "scope.userLocation": {

@@ -10,8 +10,8 @@
     <text class="warp-text">苏轼李白</text>
   </view>
   <view class="order">
-    <view class="order-auto">
-      <view class="order-left" bindtap='order'>
+    <view class="order-auto" bindtap='order'>
+      <view class="order-left">
         <image src="./image/dingdan.gif" class="order-logo"></image>  
         <text class="order-text">我的订单</text>
       </view>

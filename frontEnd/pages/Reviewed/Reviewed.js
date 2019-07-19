@@ -1,11 +1,12 @@
-// pages/order/order.js
+// pages/Reviewed/Reviewed.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    checked: true,
+    value: 4
   },
 
   /**
@@ -13,17 +14,15 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '订单'
+      title: '售后评价'
     })
   },
 
-  // 跳转评价页面
-  after(){
-    wx.navigateTo({
-      url: '../After/After'
-    })
+  onChange(event) {
+    this.setData({
+      checked: event.detail
+    });
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
