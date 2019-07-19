@@ -59,5 +59,10 @@ Page({
     wx.navigateTo({
       url: '../particulars/particulars?id='+ids
     })
+  },
+  btn(){
+    wx.navigateTo({
+      url: '../address/address',
+    })
   }
 })
