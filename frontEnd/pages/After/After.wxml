@@ -4,7 +4,7 @@
   <view class="evaluate">
     <image></image>
     <view class="content">
-      <view class="goods">
+      <view class="active">
         <van-icon name="flower-o"/>
         <text>好评</text>
       </view>

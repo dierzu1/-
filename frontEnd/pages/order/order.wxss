@@ -88,7 +88,8 @@
   font-size:24rpx;
 	color:#8b8b8b;
   border-bottom:1rpx solid #ddd;
-  margin-right:27rpx;
+  padding-right:27rpx;
+  box-sizing: border-box;
 }
 .ding .ding-list .lists .delAndre{
  font-size:26rpx;

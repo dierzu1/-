@@ -32,7 +32,7 @@
 .evaluate .content view{
   font-size: 26rpx;
 }
-.evaluate .content view.goods{
+.evaluate .content view.active{
   color: #dc3025;
 }
 .evaluate .content view text{
