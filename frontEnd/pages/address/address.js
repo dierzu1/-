@@ -39,7 +39,8 @@ Page({
     city: "",
     county: "",
     check: false,
-    Topping: false
+    Topping: false,
+    currentIndex: -1
   },
   /**
    * 生命周期函数--监听页面加载
@@ -104,6 +105,7 @@ Page({
   save(){
     let _this = this;
     let list = this.data.data;
+    let currentIndex = this.data.currentIndex;
     let obj = {
       name: _this.data.name,
       tel: _this.data.tel,
@@ -114,12 +116,17 @@ Page({
       check: false,
       Topping: false
     };
-    list.push(obj);
-    console.log(list)
+    if(this.data.currentIndex >= 0 ){//编辑
+      list[currentIndex] = obj;
+    }else{// 添加收货地址
+      list.push(obj);
+      console.log(list)
+    }
     this.setData({
       data: list,
       show: false
     })
+    
   },
   //获取地址模态框
   auto(){
@@ -136,12 +143,12 @@ Page({
     let data = [];
     let newList = list.splice(index,1);
     if (newList[0].Topping == true){
-      newList[0].Topping =false
+      newList[0].Topping = false
     }else{
       newList[0].Topping = true
     }
-    list.forEach(item=>{
-      item.Topping=false
+    list.forEach(item => {
+      item.Topping = false
     })
     list.unshift(...newList)
     this.setData({
@@ -150,12 +157,46 @@ Page({
   },  
 
   // 编辑
-  editContent(){
-
+  editContent(e){
+    console.log(e)
+    let show = !this.show;
+    this.setData({
+      show: show
+    })
+    let list = this.data.data;
+    let index = e.currentTarget.dataset.index;
+    let newList = list[index];
+    this.setData({
+      name: newList.name,
+      tel: newList.tel,
+      province1: newList.province1,
+      province2: newList.province2,
+      city: newList.city,
+      county: newList.county,
+      check: newList.check,
+      Topping: newList.Topping,
+      currentIndex: index
+    })
   },
 
   // 默认
   defaults(el){
     console.log(el)
+    let index = el.currentTarget.dataset.index;
+    let list = this.data.data;
+    
+    list.forEach((item,indexs)=> {
+      if(index == indexs){
+        console.log(1)
+        list[indexs].check = !list[indexs].check;
+      }else{
+        console.log(2)
+        list[indexs].check = false
+      }
+    })
+    console.log(list[index].check)
+    this.setData({
+      data: list
+    })
   }
 })
