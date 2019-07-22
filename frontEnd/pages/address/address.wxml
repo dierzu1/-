@@ -21,8 +21,8 @@
         <text class='city'>{{item.city}}</text>
         <text class='county'>{{item.county}}</text>
         <text class='number'>{{item.number}}</text>
-        <van-icon name="success" wx:if="{{item.check}}" class='use'/>
-        <text wx:if="{{!item.check}}" class='use size'>使用</text>
+        <van-icon name="success" wx:if="{{item.check}}" class='use'data-index="{{index}}" bindtap="defaults" />
+        <text wx:if="{{!item.check}}" class='use size'data-index="{{index}}" bindtap="defaults" >使用</text>
       </view>
       <view class='edit'>
         <van-icon name="checked" data-index="{{index}}" bindtap="defaults" wx:if="{{item.check}}" class='checked' />
