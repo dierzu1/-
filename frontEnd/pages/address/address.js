@@ -39,12 +39,13 @@ Page({
     city: "",
     county: "",
     check: false,
-    Topping: false
+    Topping: false,
+    currentIndex: -1
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     // console.log(Data)
     this.setData({
       areaList: Data
@@ -56,13 +57,13 @@ Page({
     this.setData({
       show: show
     })
-  }, 
+  },
   // 关闭模态框
   onClose() {
     this.setData({ show: false });
   },
   // 获取用户名
-  getName(e){
+  getName(e) {
     console.log(e.detail)
     this.setData({
       name: e.detail.value
@@ -70,22 +71,21 @@ Page({
   },
 
   // 获取手机号
-  getTel(e){
-    
+  getTel(e) {
     console.log(e.detail)
     this.setData({
       tel: e.detail.value
     })
   },
   // 获取详细地址
-  getCounty(e){
+  getCounty(e) {
     console.log(e);
     this.setData({
       county: e.detail.value
     })
   },
   // 点击确认
-  confirm(e){
+  confirm(e) {
     console.log(e)
     this.setData({
       province1: e.detail.values[0].name,
@@ -95,15 +95,16 @@ Page({
     })
   },
   // 点击取消
-  cancel(e){
+  cancel(e) {
     this.setData({
       popup: false,
     })
   },
   // 添加新的收获地址
-  save(){
+  save() {
     let _this = this;
     let list = this.data.data;
+    let currentIndex = this.data.currentIndex;
     let obj = {
       name: _this.data.name,
       tel: _this.data.tel,
@@ -114,15 +115,23 @@ Page({
       check: false,
       Topping: false
     };
-    list.push(obj);
-    console.log(list)
+    console.log(currentIndex)
+    if(currentIndex >= 0){
+      list[currentIndex] = obj;
+      this.setData({
+        currentIndex: -1
+      })
+    }else{
+      list.push(obj);
+      console.log(list)
+    }
     this.setData({
       data: list,
       show: false
     })
   },
   //获取地址模态框
-  auto(){
+  auto() {
     let popup = !this.data.popup;
     this.setData({
       popup: popup
@@ -130,32 +139,64 @@ Page({
   },
 
   // 置顶
-  Topping(e){
+  Topping(e) {
     let index = e.currentTarget.dataset.index;
     let list = this.data.data;
     let data = [];
-    let newList = list.splice(index,1);
-    if (newList[0].Topping == true){
-      newList[0].Topping =false
-    }else{
+    let newList = list.splice(index, 1);
+    if (newList[0].Topping == true) {
+      newList[0].Topping = false
+    } else {
       newList[0].Topping = true
     }
-    list.forEach(item=>{
-      item.Topping=false
+    list.forEach(item => {
+      item.Topping = false
     })
     list.unshift(...newList)
     this.setData({
       data: list
     })
-  },  
+  },
 
   // 编辑
-  editContent(){
-
+  editContent(e) {
+    let show = !this.show;
+    this.setData({
+      show: show
+    })
+    let index = e.currentTarget.dataset.index;
+    let list = this.data.data;
+    let newList = list[index];
+    console.log(newList)
+    this.setData({
+      name: newList.name,
+      tel: newList.tel,
+      province1: newList.province1,
+      province2: newList.province2,
+      city: newList.city,
+      county: newList.county,
+      check: newList.check,
+      Topping: newList.Topping,
+      currentIndex: index
+    })
   },
 
   // 默认
-  defaults(el){
-    console.log(el)
+  defaults(el) {
+    // console.log(el)
+    let index = el.currentTarget.dataset.index;
+    let list = this.data.data;
+    // console.log(list[index].check)
+    list.forEach((item,indexs) => {
+      if (list[index] == list[indexs]){
+        list[indexs].check = !list[indexs].check;
+      }else{
+        list[indexs].check = false;
+      }
+    })
+    this.setData({
+      data: list
+    })
+    
   }
 })

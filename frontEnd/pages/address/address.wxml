@@ -25,15 +25,15 @@
         <text wx:if="{{!item.check}}" class='use size'>使用</text>
       </view>
       <view class='edit'>
-        <van-icon name="checked" wx:if="{{item.check}}" class='checked' />
-        <van-icon name="circle" wx:if="{{!item.check}}" class='checked'/>
+        <van-icon name="checked" data-index="{{index}}" bindtap="defaults" wx:if="{{item.check}}" class='checked' />
+        <van-icon name="circle" data-index="{{index}}" bindtap="defaults" wx:if="{{!item.check}}" class='checked'/>
         <!-- circle -->
         <text wx:if="{{item.check}}" data-index="{{index}}" bindtap="defaults">已设为默认</text>
         <text wx:if="{{!item.check}}" data-index="{{index}}"  bindtap="defaults">设为默认</text>
         <view class='editRight'>
           <text class='Topping' bindtap="Topping" data-index="{{index}}" wx:if="{{item.Topping}}">取消置顶</text>
           <text class='Topping' bindtap="Topping" data-index="{{index}}" wx:if="{{!item.Topping}}">置顶</text>
-          <text class='editContent' bindtap="editContent">编辑</text>
+          <text class='editContent' bindtap="editContent" data-index="{{index}}">编辑</text>
         </view>
       </view>
     </view>
