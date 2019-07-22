@@ -13,7 +13,8 @@
     "pages/prc/prc",
     "pages/particulars/particulars",
     "pages/cart/cart",
-    "pages/for/for"
+    "pages/for/for",
+    "pages/address/address"
   ],
   "permission": {
     "scope.userLocation": {

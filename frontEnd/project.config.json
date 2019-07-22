@@ -9,20 +9,21 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
+		"coverView": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.1",
-	"appid": "wx0a78842772b012dd",
+	"appid": "wxd1d8968ddc6d7ed7",
 	"projectname": "new",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -103,12 +104,20 @@
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "address",
+					"pathName": "pages/address/address",
 					"scene": null
 				}
 			]
