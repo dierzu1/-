@@ -27,11 +27,14 @@ Page({
       check: false,
       Topping: false
     }],
+    // 模态框
     show: false,
+    // 获取地址
+    popup: false,
     areaList: {},
     name: "",
     tel: "",
-    province1: "",
+    province1: "选择地区",
     province2: "",
     city: "",
     county: "",
@@ -46,103 +49,7 @@ Page({
     this.setData({
       areaList: Data
     })
-    // 自动获取当前的位置
-    //var _this = this;
-    //调用定位方法
-    //_this.getUserLocation();*/
   },
-  /*
-  //定位方法
-  getUserLocation: function() {
-    var _this = this;
-    wx.getSetting({
-      success: (res) => {
-        // res.authSetting['scope.userLocation'] == undefined    表示 初始化进入该页面
-        // res.authSetting['scope.userLocation'] == false    表示 非初始化进入该页面,且未授权
-        // res.authSetting['scope.userLocation'] == true    表示 地理位置授权
-        if (res.authSetting['scope.userLocation'] != undefined && res.authSetting['scope.userLocation'] != true) {
-          //未授权
-          wx.showModal({
-            title: '请求授权当前位置',
-            content: '需要获取您的地理位置，请确认授权',
-            success: function(res) {
-              if (res.cancel) {
-                //取消授权
-                wx.showToast({
-                  title: '拒绝授权',
-                  icon: 'none',
-                  duration: 1000
-                })
-              } else if (res.confirm) {
-                //确定授权，通过wx.openSetting发起授权请求
-                wx.openSetting({
-                  success: function(res) {
-                    if (res.authSetting["scope.userLocation"] == true) {
-                      wx.showToast({
-                        title: '授权成功',
-                        icon: 'success',
-                        duration: 1000
-                      })
-                      //再次授权，调用wx.getLocation的API
-                      _this.geo();
-                    } else {
-                      wx.showToast({
-                        title: '授权失败',
-                        icon: 'none',
-                        duration: 1000
-                      })
-                    }
-                  }
-                })
-              }
-            }
-          })
-        } else if (res.authSetting['scope.userLocation'] == undefined) {
-          //用户首次进入页面,调用wx.getLocation的API
-          _this.geo();
-        } else {
-          console.log('授权成功')
-          //调用wx.getLocation的API
-          _this.geo();
-        }
-      }
-    })
-  },
-  // 获取定位城市
-  geo: function() {
-    var _this = this;
-    wx.getLocation({
-      type: 'wgs84',
-      success: function(res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        var speed = res.speed
-        var accuracy = res.accuracy
-        wx.request({
-          url: 'http://api.map.baidu.com/geocoder/v2/?ak=xxxxxxxxxxxx&location=' + res.latitude + ',' + res.longitude + '&output=json',
-          data: {},
-          header: {
-            'Content-Type': 'application/json'
-          },
-          success: function(ops) {
-            console.log(ops)
-            console.log('定位城市：', ops.data.result.addressComponent.city)
-          },
-          fail: function(resq) {
-            wx.showModal({
-              title: '信息提示',
-              content: '请求失败',
-              showCancel: false,
-              confirmColor: '#f37938'
-            });
-          },
-          complete: function() {
-          }
-        })
-      }
-    })
-  },*/
-  
   // 获取当前的位置
   add() {
     let show = !this.show;
@@ -150,22 +57,50 @@ Page({
       show: show
     })
   }, 
+  // 关闭模态框
   onClose() {
     this.setData({ show: false });
   },
-  // 获取用户名、手机号
+  // 获取用户名
   getName(e){
-    // console.log(e.detail)
+    console.log(e.detail)
     this.setData({
       name: e.detail.value
     })
   },
+
+  // 获取手机号
   getTel(e){
-    // console.log(e.detail)
+    
+    console.log(e.detail)
     this.setData({
       tel: e.detail.value
     })
   },
+  // 获取详细地址
+  getCounty(e){
+    console.log(e);
+    this.setData({
+      county: e.detail.value
+    })
+  },
+  // 点击确认
+  confirm(e){
+    console.log(e)
+    this.setData({
+      province1: e.detail.values[0].name,
+      province2: e.detail.values[1].name,
+      city: e.detail.values[2].name,
+      popup: false
+    })
+  },
+  // 点击取消
+  cancel(e){
+    this.setData({
+      popup: false,
+    })
+  },
+  // 添加新的收获地址
   save(){
     let _this = this;
     let list = this.data.data;
@@ -180,14 +115,39 @@ Page({
       Topping: false
     };
     list.push(obj);
+    console.log(list)
+    this.setData({
+      data: list,
+      show: false
+    })
+  },
+  //获取地址模态框
+  auto(){
+    let popup = !this.data.popup;
+    this.setData({
+      popup: popup
+    })
+  },
+
+  // 置顶
+  Topping(e){
+    let index = e.currentTarget.dataset.index;
+    let list = this.data.data;
+    let data = [];
+    let newList = list.splice(index,1);
+    if (newList[0].Topping == true){
+      newList[0].Topping =false
+    }else{
+      newList[0].Topping = true
+    }
+    list.forEach(item=>{
+      item.Topping=false
+    })
+    list.unshift(...newList)
     this.setData({
       data: list
     })
-  },
-  // 置顶
-  Topping(){
-
-  },
+  },  
 
   // 编辑
   editContent(){
@@ -195,7 +155,7 @@ Page({
   },
 
   // 默认
-  default(){
-
+  defaults(el){
+    console.log(el)
   }
 })
