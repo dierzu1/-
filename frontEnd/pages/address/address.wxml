@@ -10,7 +10,7 @@
   <!-- 中部开始 -->
   <view class='body'>
     <view class='item'wx:for="{{data}}" wx:key="{{index}}" data-index="{{index}}">
-      <van-icon name="cross" class='cross'/>
+      <van-icon name="cross" class='cross' bindtap="remove"/>
       <view class='name'>
         <text>{{item.name}}</text>，
         <text>{{item.tel}}</text>
@@ -76,5 +76,5 @@
     <van-area class="vanArea" wx:if="{{ popup }}" item-height="50" area-list="{{ areaList }}" bindcancel="cancel"  columns-num="3" bindconfirm="confirm"/>
   </van-popup>
   <!-- 模态框结束 -->
-  
+  <van-dialog id="van-dialog" bindtap="confirm" bindtap="cancel"/>
 </view>
