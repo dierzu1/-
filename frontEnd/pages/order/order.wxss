@@ -88,7 +88,8 @@
   font-size:24rpx;
 	color:#8b8b8b;
   border-bottom:1rpx solid #ddd;
-  margin-right:27rpx;
+  padding-right:27rpx;
+  box-sizing: border-box;
 }
 .ding .ding-list .lists .delAndre{
  font-size:26rpx;
@@ -108,9 +109,12 @@
   color: #aaa8a8;
 }
 .ding .ding-list .lists .delAndre .recommend{
-  margin:20rpx 21rpx 0 11rpx;
+  margin:20rpx 21rpx 0 0;
    border: 1rpx solid #1ca95e;
    color:#1ca95e;
+}
+.ding .ding-list .lists .delAndre .del{
+  margin:20rpx 11rpx 0;
 }
 .ding .ding-list .lists .delAndre  .removeList{
    margin:20rpx 21rpx 0 11rpx;

@@ -9,21 +9,20 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
-		"coverView": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"nodeModules": true
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.1",
-	"appid": "wxd1d8968ddc6d7ed7",
+	"appid": "wxc176dcbbc21c8865",
 	"projectname": "new",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -49,15 +48,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 12,
 			"list": [
-				{
-					"id": -1,
-					"name": "recom",
-					"pathName": "pages/recom/recom",
-					"query": "",
-					"scene": null
-				},
 				{
 					"id": -1,
 					"name": "sds",
@@ -109,8 +101,36 @@
 				},
 				{
 					"id": -1,
+					"name": "pages/evaluate/evaluate",
+					"pathName": "pages/evaluate/evaluate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
 					"name": "for",
 					"pathName": "pages/for/for",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/refund/refund",
+					"pathName": "pages/refund/refund",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "applyRefund",
+					"pathName": "pages/applyRefund/applyRefund",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
 					"query": "",
 					"scene": null
 				},

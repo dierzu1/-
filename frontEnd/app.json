@@ -14,6 +14,11 @@
     "pages/particulars/particulars",
     "pages/cart/cart",
     "pages/for/for",
+    "pages/After/After",
+    "pages/Reviewed/Reviewed",
+    "pages/Publish/Publish",
+    "pages/success/success",
+    "pages/applyRefund/applyRefund",
     "pages/address/address"
   ],
   "permission": {

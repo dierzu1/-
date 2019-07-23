@@ -1,4 +1,5 @@
 let keys = 'SGXBZ-6X3K6-NYLSF-MALZD-QC6PK-BABOS';
+import Dialog from '/vant-weapp/dialog/dialog';
 let _page, _this;
 import Data from "./data.js";
 // pages/address/address.js
@@ -197,6 +198,22 @@ Page({
     this.setData({
       data: list
     })
-    
+  },
+  remove(e) {
+    let index = e.currentTarget.dataset.index;
+    let list = this.data.data;
+    Dialog.confirm({
+      message: '确定要删除该地址吗？'
+    }).then(() => {
+      // on confirm删除
+      console.log(111)
+      list.splice(index,1);
+      this.setData({
+        data: list
+      })
+    }).catch(() => {
+      // on cancel取消删除
+      console.log(222)
+    });
   }
 })
