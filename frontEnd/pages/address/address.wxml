@@ -10,7 +10,11 @@
   <!-- 中部开始 -->
   <view class='body'>
     <view class='item'wx:for="{{data}}" wx:key="{{index}}" data-index="{{index}}">
+<<<<<<< HEAD
       <van-icon name="cross" class='cross' bindtap="remove"/>
+=======
+      <van-icon name="cross" class='cross' bindtap="remove" data-index="{{index}}"/>
+>>>>>>> b23c4bc5b77071c5d3ffd0e25bd8bd78fb01a311
       <view class='name'>
         <text>{{item.name}}</text>，
         <text>{{item.tel}}</text>
