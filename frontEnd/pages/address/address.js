@@ -199,16 +199,6 @@ Page({
       data: list
     })
   },
-<<<<<<< HEAD
-  remove() {
-    Dialog.confirm({
-      message: '确定要删除该地址吗？'
-    }).then(() => {
-      // on confirm
-      console.log(111)
-    }).catch(() => {
-      // on cancel
-=======
   remove(e) {
     let index = e.currentTarget.dataset.index;
     let list = this.data.data;
@@ -223,7 +213,6 @@ Page({
       })
     }).catch(() => {
       // on cancel取消删除
->>>>>>> b23c4bc5b77071c5d3ffd0e25bd8bd78fb01a311
       console.log(222)
     });
   }
